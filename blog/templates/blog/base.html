@@ -1,0 +1,68 @@
+{% load static %}
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+         <title>Sportblog</title>
+         
+        <link rel="stylesheet" href="https://maxdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel='stylesheet' type='text/css'>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://maxcd.bootstrapsdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}"/> 
+        <!--<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}"/> -->
+        
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+    
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'post_list' %}">Sportblog</a>
+                    
+                    </div>
+    
+                    <div class="collapse navbar-collapse" id="topNavBar">
+                        <ul class="nav navbar-nav navbar">
+                            <li class="active">
+                                <a href="{% url 'post_new' %}">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Post 
+                                </a>
+                            </li>
+                            <li class="">
+                                    <a href="{% url 'post_list' %}">
+                                        <span class="glyphicon glyhicon" aria-hidden="true"></span>&nbsp; Sport 
+                                    </a>
+                            </li>
+                        </ul>
+                          
+                        <form class="navbar-form navbar-left" role="search" method="get" action="#">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="q" value="">
+                            </div>
+                            <button type="submit" class="btn btn-default">search</button>
+                        </form>
+                    </div>
+                </div>
+        </nav>
+    </head>
+    
+    <body>
+        <div>
+            
+        </div>
+
+        </div>
+            {% block content %}
+                {% block post %}
+                {% endblock %}
+            {% endblock %}
+        </div>
+        </div>
+    </body>
+</html>

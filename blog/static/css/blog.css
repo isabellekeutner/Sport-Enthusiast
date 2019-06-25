@@ -1,0 +1,167 @@
+a {
+    color: rgb(79, 82, 97);
+    font-family: 'B612 Mono', monospace;
+}
+p {
+    color: grey;
+}
+
+h1{
+    color: rgb(79, 82, 97);
+    font-family: 'B612 Mono', monospace;
+}
+
+h2{
+    color: rgb(79, 82, 97);
+    font-family: 'B612 Mono', monospace;
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'satisfy', 'Arial';
+}
+
+/* Slides */
+
+.slider {
+    overflow-x: hidden;
+}
+ 
+.sliderElements {
+    width: 400%; 
+}
+ 
+.sliderElements > li {
+    float: left;
+    width: 25%; 
+}
+ 
+.sliderElements:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.sliderElements {
+    position: relative;
+    left: 0;
+}
+ 
+.slider input:nth-of-type(2):checked ~ .sliderElements {
+    left: -100%;
+}
+ 
+.slider input:nth-of-type(3):checked ~ .sliderElements {
+    left: -200%;
+}
+ 
+#slide04:checked ~ .sliderElements {
+    left: -300%;
+}
+.sliderElements,
+.sliderElements figure,
+.sliderControls {
+    margin: 0;
+}
+ 
+.sliderElements:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    overflow: hidden;
+}
+ 
+.cssSlider {
+    overflow-x: hidden;
+}
+ 
+.sliderElements {
+    list-style: none;
+    position: relative;
+    left: 0;
+    width: 400%;
+    margin-bottom: .8em;
+    padding: 0;
+    -webkit-transition: left .8s ease-in-out;
+    -moz-transition: left .8s ease-in-out;
+    -o-transition: left .8s ease-in-out;
+    transition: left .8s ease-in-out;
+}
+ 
+.sliderElements > li {
+    float: left;
+    width: 25%;
+    position: relative;
+}
+ 
+#slide02:checked ~ .sliderElements {
+    left: -100%;
+}
+ 
+#slide03:checked ~ .sliderElements {
+    left: -200%;
+}
+ 
+#slide04:checked ~ .sliderElements {
+    left: -300%;
+}
+ 
+.sliderElements figcaption {
+    display: block;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    padding: .4em;
+    background: rgba(0,0,0,.5);
+}
+ 
+.sliderElements img {
+    width: 100%;
+    height: auto;
+}
+ 
+.cssSlider input {
+    position: absolute;
+    left: -99999px;
+}
+ 
+.sliderControls {
+    text-align: center;
+}
+ 
+.sliderControls li {
+    display: inline-block;
+}
+ 
+.sliderControls label {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    background: #68B022;
+    color: #68B022;
+}
+ 
+.sliderControls label:hover,
+#slide01:checked ~ .sliderControls label[for="slide01"],
+#slide02:checked ~ .sliderControls label[for="slide02"],
+#slide03:checked ~ .sliderControls label[for="slide03"],
+#slide04:checked ~ .sliderControls label[for="slide04"] {
+    background: #ddd;
+    color: #ddd;
+}
+/* Ende Slides */
