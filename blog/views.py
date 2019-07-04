@@ -41,3 +41,7 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def event_list(request):
+    event = Event.objects.filter(published_date__lte=timezone.now()).order_by('publihed_date')
+    return render(request, 'blog/event_list.html', {'events': events})
